@@ -1698,7 +1698,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f1afff;
+  background: #ffc6ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2806,7 +2806,8 @@ hr {
   color: #fff;
 }
 .header .menu .menu-item a:hover {
-  background: #31b0d5;
+  background: #5cb85c;
+/* #31b0d5 */
 }
 .text-center {
   text-align: center;
@@ -2858,9 +2859,6 @@ hr {
   box-shadow: 1px 2px 3px #ddd;
   background: #fff;
 }
-body {
-  background: #eee;
-}
 article .post-content {
   padding: 20px 50px;
   margin-bottom: 50px;
@@ -2882,6 +2880,9 @@ article .post-content {
 }
 .content-wrap {
   box-sizing: border-box;
+  background: #eee;
+  padding: 30px;
+  border-radius: 8px;
 }
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
@@ -2956,4 +2957,7 @@ article .post-content {
 }
 .pagination a {
   border: 1px solid #d2d2d2;
+}
+.footer .copyright {
+  text-align: center;
 }
