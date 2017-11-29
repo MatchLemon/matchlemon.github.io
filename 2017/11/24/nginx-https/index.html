@@ -123,6 +123,19 @@
     }
   };
 </script>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: window.location.pathname,
+  owner: 'MatchLemon',
+  repo: 'Lemon',
+  oauth: {
+    client_id: 'c016399161fcbedcfdc8',
+    client_secret: 'e341edaf9e0db8e07fdc68b267dd5cd256be3377'
+  }
+});
+</script>
 
 
 
@@ -397,23 +410,6 @@
 <p>重新使用SSL会话参数以避免SSL握手进行并行连接和后续连接。设置SSL会话缓存，并由ssl_session_cache 指令进行配置<br>ssl_session_cache shared:SSL:10m;</p>
 
         
-
-        <div id="container"></div>
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-        <script>
-        var gitment = new Gitment({
-          id: window.location.pathname,
-          owner: 'MatchLemon',
-          repo: 'Lemon',
-          oauth: {
-            client_id: 'c016399161fcbedcfdc8',
-            client_secret: 'e341edaf9e0db8e07fdc68b267dd5cd256be3377'
-          }
-        });
-        gitment.render('container');
-        </script>
-
       </div>
 
       <div>
