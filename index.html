@@ -395,23 +395,17 @@ var gitment = new Gitment({
 
         
           
-            
-              <h1 id="Mongo3-4-开启用户验证"><a href="#Mongo3-4-开启用户验证" class="headerlink" title="Mongo3.4  开启用户验证"></a>Mongo3.4  开启用户验证</h1><p>###参考 <a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/" target="_blank" rel="noopener">官方文档3.4</a>说明</p>
+            <h1 id="Mongo3-4-开启用户验证"><a href="#Mongo3-4-开启用户验证" class="headerlink" title="Mongo3.4  开启用户验证"></a>Mongo3.4  开启用户验证</h1><p>###参考 <a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/" target="_blank" rel="noopener">官方文档3.4</a>说明</p>
 <blockquote>
 <h2 id="1-创建用户"><a href="#1-创建用户" class="headerlink" title="1. 创建用户"></a>1. 创建用户</h2></blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(</span><br><span class="line">  &#123;</span><br><span class="line">    user: &quot;myUserAdmin&quot;,</span><br><span class="line">    pwd: &quot;abc123&quot;,</span><br><span class="line">    roles: [ &#123; role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; &#125; ]</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h2 id="2-切换身份验证"><a href="#2-切换身份验证" class="headerlink" title="2. 切换身份验证"></a>2. 切换身份验证</h2></blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.auth(&quot;myUserAdmin&quot;, &quot;abc123&quot; )</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h2 id="3-启用验证重启Mongodb"><a href="#3-启用验证重启Mongodb" class="headerlink" title="3. 启用验证重启Mongodb"></a>3. 启用验证重启Mongodb</h2></blockquote>
-<p>mongod使用–auth命令行重启数据库，或者使用配置文件 <a href="https://docs.mongodb.com/manual/reference/configuration-options/#security.authorization" target="_blank" rel="noopener">security.authorization</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mongod --auth --port 27017 --dbpath / data / db1</span><br><span class="line">配置文件配置如下yaml：</span><br><span class="line">security：</span><br><span class="line">    authorization:enabled</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h2 id="4-修改用户密码"><a href="#4-修改用户密码" class="headerlink" title="4. 修改用户密码"></a>4. 修改用户密码</h2></blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.updateUser(</span><br><span class="line">   &quot;myUserAdmin&quot;,</span><br><span class="line">   &#123;</span><br><span class="line">      pwd: &quot;KNlZmiaNUp0B&quot;,</span><br><span class="line">      customData: &#123; title: &quot;Senior Manager&quot; &#125;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-            
+            <!--noindex-->
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/11/29/mongod-auth/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+            <!--/noindex-->
           
         
       </div>
