@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="maven 后台打包跳过Test install -Dmaven.test.skip&amp;gt; ## spring-boot deploy in backend (script) PATH_JAR=&amp;quot;./manager-0.0.1-SNAPSHOT.jar&amp;quot; PID_PATH_">
+<meta name="description" content="maven 后台打包跳过Test mvn install -Dmaven.test.skip=true  spring-boot deploy in backend (script) PATH_JAR=&amp;quot;./manager-0.0.1-SNAPSHOT.jar&amp;quot;PID_PATH_NA">
 <meta name="keywords" content="mvn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Home">
 <meta property="og:url" content="https://matchlemon.github.io/2017/11/24/home/index.html">
 <meta property="og:site_name" content="[object Object]">
-<meta property="og:description" content="maven 后台打包跳过Test install -Dmaven.test.skip&amp;gt; ## spring-boot deploy in backend (script) PATH_JAR=&amp;quot;./manager-0.0.1-SNAPSHOT.jar&amp;quot; PID_PATH_NAME=&amp;quot;./pid&amp;quot; case $1 in     stop)">
+<meta property="og:description" content="maven 后台打包跳过Test mvn install -Dmaven.test.skip=true  spring-boot deploy in backend (script) PATH_JAR=&amp;quot;./manager-0.0.1-SNAPSHOT.jar&amp;quot;PID_PATH_NAME=&amp;quot;./pid&amp;quot;case $1 in    stop)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-30T02:55:04.439Z">
+<meta property="og:updated_time" content="2017-11-30T02:57:47.668Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Home">
-<meta name="twitter:description" content="maven 后台打包跳过Test install -Dmaven.test.skip&amp;gt; ## spring-boot deploy in backend (script) PATH_JAR=&amp;quot;./manager-0.0.1-SNAPSHOT.jar&amp;quot; PID_PATH_NAME=&amp;quot;./pid&amp;quot; case $1 in     stop)">
+<meta name="twitter:description" content="maven 后台打包跳过Test mvn install -Dmaven.test.skip=true  spring-boot deploy in backend (script) PATH_JAR=&amp;quot;./manager-0.0.1-SNAPSHOT.jar&amp;quot;PID_PATH_NAME=&amp;quot;./pid&amp;quot;case $1 in    stop)">
 
 
 
@@ -370,44 +370,21 @@
         
           <blockquote>
 <h2 id="maven-后台打包跳过Test"><a href="#maven-后台打包跳过Test" class="headerlink" title="maven 后台打包跳过Test"></a>maven 后台打包跳过Test</h2></blockquote>
-<figure class="highlight plain"><figcaption><span>install -Dmaven.test.skip</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; ## spring-boot deploy in backend (script)</span><br></pre></td></tr></table></figure>
-<pre><code>PATH_JAR=&quot;./manager-0.0.1-SNAPSHOT.jar&quot;
-PID_PATH_NAME=&quot;./pid&quot;
-case $1 in
-    stop)
-        echo &quot;stoped spring-boot&quot;
-        if [ -f $PID_PATH_NAME ]; then
-            PID=$(cat $PID_PATH_NAME);
-            echo &quot;spting-boot stoping ...&quot;
-            kill $PID;
-            echo &quot;spting-boot stopped ...&quot;
-            rm $PID_PATH_NAME
-        else
-            echo &quot;$SERVICE_NAME is not running ...&quot;
-        fi
-    ;;
-    start)
-        echo &quot;strted spring-boot&quot;
-        pathJar=$(pwd)/$(ls | grep *.jar)
-        echo $pathJar
-        nohup java -jar $pathJar &gt; data.log 2&gt; error.log&amp;
-        echo $!&gt; $PID_PATH_NAME
-    ;;
-    restart)
-        pathJar=$(pwd)/$(ls | grep *.jar)
-        echo $pathJar
-        eval $(pwd)/$0 stop
-        eval $(pwd)/$0 start
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn install -Dmaven.test.skip=true</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h2 id="spring-boot-deploy-in-backend-script"><a href="#spring-boot-deploy-in-backend-script" class="headerlink" title="spring-boot deploy in backend (script)"></a>spring-boot deploy in backend (script)</h2></blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PATH_JAR=&quot;./manager-0.0.1-SNAPSHOT.jar&quot;</span><br><span class="line">PID_PATH_NAME=&quot;./pid&quot;</span><br><span class="line">case $1 in</span><br><span class="line">    stop)</span><br><span class="line">        echo &quot;stoped spring-boot&quot;</span><br><span class="line">        if [ -f $PID_PATH_NAME ]; then</span><br><span class="line">            PID=$(cat $PID_PATH_NAME);</span><br><span class="line">            echo &quot;spting-boot stoping ...&quot;</span><br><span class="line">            kill $PID;</span><br><span class="line">            echo &quot;spting-boot stopped ...&quot;</span><br><span class="line">            rm $PID_PATH_NAME</span><br><span class="line">        else</span><br><span class="line">            echo &quot;$SERVICE_NAME is not running ...&quot;</span><br><span class="line">        fi</span><br><span class="line">    ;;</span><br><span class="line">    start)</span><br><span class="line">        echo &quot;strted spring-boot&quot;</span><br><span class="line">        pathJar=$(pwd)/$(ls | grep *.jar)</span><br><span class="line">        echo $pathJar</span><br><span class="line">        nohup java -jar $pathJar &gt; data.log 2&gt; error.log&amp;</span><br><span class="line">        echo $!&gt; $PID_PATH_NAME</span><br><span class="line">    ;;</span><br><span class="line">    restart)</span><br><span class="line">        pathJar=$(pwd)/$(ls | grep *.jar)</span><br><span class="line">        echo $pathJar</span><br><span class="line">        eval $(pwd)/$0 stop</span><br><span class="line">        eval $(pwd)/$0 start</span><br><span class="line"></span><br><span class="line">    ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="strat-server"><a href="#strat-server" class="headerlink" title="strat server"></a>strat server</h3></blockquote>
+<figure class="highlight plain"><figcaption><span>start ```</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; ### stop server</span><br><span class="line"></span><br><span class="line">``` spring-boot.sh stop</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="restart-server"><a href="#restart-server" class="headerlink" title="restart server"></a>restart server</h3></blockquote>
+<figure class="highlight plain"><figcaption><span>restart ```</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; ### restart mongod</span><br></pre></td></tr></table></figure>
+<pre><code>service mongod start
+service mongod stop
+service mongod restart
+</code></pre><p>```</p>
 
-    ;;
-esac
-</code></pre><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; ### strat server</span><br><span class="line"></span><br><span class="line">``` spring-boot.sh start</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h3 id="stop-server"><a href="#stop-server" class="headerlink" title="stop server"></a>stop server</h3></blockquote>
-<figure class="highlight plain"><figcaption><span>stop ```</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; ### restart server</span><br><span class="line"></span><br><span class="line">``` spring-boot.sh restart</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h3 id="restart-mongod"><a href="#restart-mongod" class="headerlink" title="restart mongod"></a>restart mongod</h3></blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service mongod start</span><br><span class="line">service mongod stop</span><br><span class="line">service mongod restart</span><br></pre></td></tr></table></figure>
         
       </div>
 
@@ -586,7 +563,7 @@ esac
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#maven-后台打包跳过Test"><span class="nav-number">1.</span> <span class="nav-text">maven 后台打包跳过Test</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#stop-server"><span class="nav-number">1.1.</span> <span class="nav-text">stop server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#restart-mongod"><span class="nav-number">1.2.</span> <span class="nav-text">restart mongod</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#maven-后台打包跳过Test"><span class="nav-number">1.</span> <span class="nav-text">maven 后台打包跳过Test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring-boot-deploy-in-backend-script"><span class="nav-number">2.</span> <span class="nav-text">spring-boot deploy in backend (script)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#strat-server"><span class="nav-number">2.1.</span> <span class="nav-text">strat server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#restart-server"><span class="nav-number">2.2.</span> <span class="nav-text">restart server</span></a></li></ol></li></ol></div>
             
 
           </div>
