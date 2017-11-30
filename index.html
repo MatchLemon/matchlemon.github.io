@@ -397,7 +397,7 @@
             <h1 id="Mongo3-4-开启用户验证"><a href="#Mongo3-4-开启用户验证" class="headerlink" title="Mongo3.4  开启用户验证"></a>Mongo3.4  开启用户验证</h1><p>###参考 <a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/" target="_blank" rel="noopener">官方文档3.4</a>说明</p>
 <blockquote>
 <h2 id="1-创建用户"><a href="#1-创建用户" class="headerlink" title="1. 创建用户"></a>1. 创建用户</h2></blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(</span><br><span class="line">  &#123;</span><br><span class="line">    user: &quot;myUserAdmin&quot;,</span><br><span class="line">    pwd: &quot;abc123&quot;,</span><br><span class="line">    roles: [ &#123; role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; &#125; ]</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(</span><br><span class="line">  &#123;</span><br><span class="line">    user: &quot;myUserAdmin&quot;,</span><br><span class="line">    pwd: &quot;abc123&quot;,</span><br><span class="line">    roles: [ &#123; role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; &#125; ]</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
             <!--noindex-->
             <div class="post-button text-center">
               <a class="btn" href="/2017/11/29/mongod-auth/#more" rel="contents">
@@ -697,8 +697,8 @@
         
           
             <blockquote>
-<h2 id="1-maven-后台打包跳过Test"><a href="#1-maven-后台打包跳过Test" class="headerlink" title="1. maven 后台打包跳过Test"></a>1. maven 后台打包跳过Test</h2></blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn install -Dmaven.test.skip=true</span><br></pre></td></tr></table></figure>
+<h2 id="1-Maven-后台打包跳过Test"><a href="#1-Maven-后台打包跳过Test" class="headerlink" title="1. Maven 后台打包跳过Test"></a>1. Maven 后台打包跳过Test</h2></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install -Dmaven.test.skip=true</span><br></pre></td></tr></table></figure>
             <!--noindex-->
             <div class="post-button text-center">
               <a class="btn" href="/2017/11/24/home/#more" rel="contents">

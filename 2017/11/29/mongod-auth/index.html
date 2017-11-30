@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="Mongo3.4  开启用户验证###参考 官方文档3.4说明  1. 创建用户 use admindb.createUser(  &amp;#123;    user: &amp;quot;myUserAdmin&amp;quot;,    pwd: &amp;quot;abc123&amp;quot;,    ro">
+<meta name="description" content="Mongo3.4  开启用户验证###参考 官方文档3.4说明  1. 创建用户 12345678use admindb.createUser(  &amp;#123;    user: &amp;quot;myUserAdmin&amp;quot;,    pwd: &amp;quot;abc123&amp;quot">
 <meta name="keywords" content="mongo,mongodb,auth">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mongo3.4  开启用户验证">
 <meta property="og:url" content="https://matchlemon.github.io/2017/11/29/mongod-auth/index.html">
 <meta property="og:site_name" content="[object Object]">
-<meta property="og:description" content="Mongo3.4  开启用户验证###参考 官方文档3.4说明  1. 创建用户 use admindb.createUser(  &amp;#123;    user: &amp;quot;myUserAdmin&amp;quot;,    pwd: &amp;quot;abc123&amp;quot;,    roles: [ &amp;#123; role: &amp;quot;userAdminAnyDatabase&amp;quot;, db: &amp;q">
+<meta property="og:description" content="Mongo3.4  开启用户验证###参考 官方文档3.4说明  1. 创建用户 12345678use admindb.createUser(  &amp;#123;    user: &amp;quot;myUserAdmin&amp;quot;,    pwd: &amp;quot;abc123&amp;quot;,    roles: [ &amp;#123; role: &amp;quot;userAdminAnyDatabase&amp;quot;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-11-29T09:57:47.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mongo3.4  开启用户验证">
-<meta name="twitter:description" content="Mongo3.4  开启用户验证###参考 官方文档3.4说明  1. 创建用户 use admindb.createUser(  &amp;#123;    user: &amp;quot;myUserAdmin&amp;quot;,    pwd: &amp;quot;abc123&amp;quot;,    roles: [ &amp;#123; role: &amp;quot;userAdminAnyDatabase&amp;quot;, db: &amp;q">
+<meta name="twitter:description" content="Mongo3.4  开启用户验证###参考 官方文档3.4说明  1. 创建用户 12345678use admindb.createUser(  &amp;#123;    user: &amp;quot;myUserAdmin&amp;quot;,    pwd: &amp;quot;abc123&amp;quot;,    roles: [ &amp;#123; role: &amp;quot;userAdminAnyDatabase&amp;quot;">
 
 
 
@@ -393,18 +393,18 @@
           <h1 id="Mongo3-4-开启用户验证"><a href="#Mongo3-4-开启用户验证" class="headerlink" title="Mongo3.4  开启用户验证"></a>Mongo3.4  开启用户验证</h1><p>###参考 <a href="https://docs.mongodb.com/manual/tutorial/enable-authentication/" target="_blank" rel="noopener">官方文档3.4</a>说明</p>
 <blockquote>
 <h2 id="1-创建用户"><a href="#1-创建用户" class="headerlink" title="1. 创建用户"></a>1. 创建用户</h2></blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(</span><br><span class="line">  &#123;</span><br><span class="line">    user: &quot;myUserAdmin&quot;,</span><br><span class="line">    pwd: &quot;abc123&quot;,</span><br><span class="line">    roles: [ &#123; role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; &#125; ]</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(</span><br><span class="line">  &#123;</span><br><span class="line">    user: &quot;myUserAdmin&quot;,</span><br><span class="line">    pwd: &quot;abc123&quot;,</span><br><span class="line">    roles: [ &#123; role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; &#125; ]</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <blockquote>
 <h2 id="2-切换身份验证"><a href="#2-切换身份验证" class="headerlink" title="2. 切换身份验证"></a>2. 切换身份验证</h2></blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.auth(&quot;myUserAdmin&quot;, &quot;abc123&quot; )</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.auth(&quot;myUserAdmin&quot;, &quot;abc123&quot; )</span><br></pre></td></tr></table></figure>
 <blockquote>
 <h2 id="3-启用验证重启Mongodb"><a href="#3-启用验证重启Mongodb" class="headerlink" title="3. 启用验证重启Mongodb"></a>3. 启用验证重启Mongodb</h2></blockquote>
 <p>mongod使用–auth命令行重启数据库，或者使用配置文件 <a href="https://docs.mongodb.com/manual/reference/configuration-options/#security.authorization" target="_blank" rel="noopener">security.authorization</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mongod --auth --port 27017 --dbpath / data / db1</span><br><span class="line">配置文件配置如下yaml：</span><br><span class="line">security：</span><br><span class="line">    authorization:enabled</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mongod --auth --port 27017 --dbpath / data / db1</span><br><span class="line">配置文件配置如下yaml：</span><br><span class="line">security：</span><br><span class="line">    authorization:enabled</span><br></pre></td></tr></table></figure>
 <blockquote>
 <h2 id="4-修改用户密码"><a href="#4-修改用户密码" class="headerlink" title="4. 修改用户密码"></a>4. 修改用户密码</h2></blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.updateUser(</span><br><span class="line">   &quot;myUserAdmin&quot;,</span><br><span class="line">   &#123;</span><br><span class="line">      pwd: &quot;KNlZmiaNUp0B&quot;,</span><br><span class="line">      customData: &#123; title: &quot;Senior Manager&quot; &#125;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.updateUser(</span><br><span class="line">   &quot;myUserAdmin&quot;,</span><br><span class="line">   &#123;</span><br><span class="line">      pwd: &quot;KNlZmiaNUp0B&quot;,</span><br><span class="line">      customData: &#123; title: &quot;Senior Manager&quot; &#125;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
         
       </div>
