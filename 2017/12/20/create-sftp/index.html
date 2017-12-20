@@ -32,7 +32,7 @@
 
   
   
-  <link href="/public/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -66,9 +66,9 @@
 
 
 
-<link href="/public/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/public/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="sftp," />
@@ -80,32 +80,32 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/public/logo.png?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/logo.png?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="Create Group1groupadd sftp Create User123创建用户，用户名为sftpu 使用-G添加附加用户组useradd -G sftp -s /bin/false sftpu   useradd pamrams  1234567891011-c&amp;lt;备注&amp;gt; 　修改用">
+<meta name="description" content="搭建sfp服务器(create group and user)，简单的记录">
 <meta name="keywords" content="sftp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Create Sftp">
 <meta property="og:url" content="https://matchlemon.github.io/2017/12/20/create-sftp/index.html">
 <meta property="og:site_name" content="[object Object]">
-<meta property="og:description" content="Create Group1groupadd sftp Create User123创建用户，用户名为sftpu 使用-G添加附加用户组useradd -G sftp -s /bin/false sftpu   useradd pamrams  1234567891011-c&amp;lt;备注&amp;gt; 　修改用户帐号的备注文字。-d&amp;lt;登入目录&amp;gt; 　修改用户登入时的目录。-e&amp;lt;有效期限&amp;g">
+<meta property="og:description" content="搭建sfp服务器(create group and user)，简单的记录">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-20T02:25:37.490Z">
+<meta property="og:updated_time" content="2017-12-20T02:33:22.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Create Sftp">
-<meta name="twitter:description" content="Create Group1groupadd sftp Create User123创建用户，用户名为sftpu 使用-G添加附加用户组useradd -G sftp -s /bin/false sftpu   useradd pamrams  1234567891011-c&amp;lt;备注&amp;gt; 　修改用户帐号的备注文字。-d&amp;lt;登入目录&amp;gt; 　修改用户登入时的目录。-e&amp;lt;有效期限&amp;g">
+<meta name="twitter:description" content="搭建sfp服务器(create group and user)，简单的记录">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/public/',
+    root: '/',
     scheme: 'Mist',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
@@ -179,7 +179,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/public/"  class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">[object Object]</span>
         <span class="logo-line-after"><i></i></span>
@@ -207,7 +207,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/public/" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -217,7 +217,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/public/categories" rel="section">
+          <a href="/categories" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -227,7 +227,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/public/tags" rel="section">
+          <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -237,7 +237,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/public/archives" rel="section">
+          <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -247,7 +247,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/public/about" rel="section">
+          <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -286,7 +286,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <div class="corner"></div>
     <div class="post-content">
-      <link itemprop="mainEntityOfPage" href="https://matchlemon.github.io/public/2017/12/20/create-sftp/">
+      <link itemprop="mainEntityOfPage" href="https://matchlemon.github.io/2017/12/20/create-sftp/">
 
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="½">
@@ -340,7 +340,7 @@
 
             
             
-               <span id="/public/2017/12/20/create-sftp/" class="leancloud_visitors" data-flag-title="Create Sftp">
+               <span id="/2017/12/20/create-sftp/" class="leancloud_visitors" data-flag-title="Create Sftp">
                  <span class="post-meta-divider">|</span>
                  <span class="post-meta-item-icon">
                    <i class="fa fa-eye"></i>
@@ -357,6 +357,10 @@
             
 
             
+                <div class="post-description">
+                    搭建sfp服务器(create group and user)，简单的记录
+                </div>
+            
 
           </div>
         </header>
@@ -371,15 +375,17 @@
         
           <h2 id="Create-Group"><a href="#Create-Group" class="headerlink" title="Create Group"></a>Create Group</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd sftp</span><br></pre></td></tr></table></figure>
 <h2 id="Create-User"><a href="#Create-User" class="headerlink" title="Create User"></a>Create User</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建用户，用户名为sftpu 使用-G添加附加用户组</span><br><span class="line"></span><br><span class="line">useradd -G sftp -s /bin/false sftpu</span><br></pre></td></tr></table></figure>
-<blockquote>
+<a id="more"></a>
 <blockquote>
 <h3 id="useradd-pamrams"><a href="#useradd-pamrams" class="headerlink" title="useradd pamrams"></a>useradd pamrams</h3></blockquote>
-</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-c&lt;备注&gt; 　修改用户帐号的备注文字。</span><br><span class="line">-d&lt;登入目录&gt; 　修改用户登入时的目录。</span><br><span class="line">-e&lt;有效期限&gt; 　修改帐号的有效期限。</span><br><span class="line">-f&lt;缓冲天数&gt; 　修改在密码过期后多少天即关闭该帐号。</span><br><span class="line">-g&lt;群组&gt; 　修改用户所属的群组。</span><br><span class="line">-G&lt;群组&gt; 　修改用户所属的附加群组。</span><br><span class="line">-l&lt;帐号名称&gt; 　修改用户帐号名称。</span><br><span class="line">-L 　锁定用户密码，使密码无效。</span><br><span class="line">-s&lt;shell&gt; 　修改用户登入后所使用的shell。</span><br><span class="line">-u&lt;uid&gt; 　修改用户ID。</span><br><span class="line">-U 　解除密码锁定。</span><br></pre></td></tr></table></figure>
 <h2 id="Configution-sshd-config"><a href="#Configution-sshd-config" class="headerlink" title="Configution sshd_config"></a>Configution sshd_config</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    找到如下这行，并注释掉</span><br><span class="line">    Subsystem      sftp    /usr/libexec/openssh/sftp-server</span><br><span class="line"></span><br><span class="line">    添加如下几行</span><br><span class="line">    Subsystem       sftp    internal-sftp</span><br><span class="line">    Match Group sftp</span><br><span class="line">    ChrootDirectory /data/sftp/%u</span><br><span class="line">    ForceCommand    internal-sftp</span><br><span class="line">    AllowTcpForwarding no</span><br><span class="line">    X11Forwarding no</span><br><span class="line"></span><br><span class="line">ChrootDirectory /data/sftp/%u</span><br><span class="line">用chroot将用户的根目录指定到/data/sftp/%u，%u代表用户名，这样用户就只能在/data/sftp/%u下活动</span><br></pre></td></tr></table></figure>
-<h2 id="Create-sftp"><a href="#Create-sftp" class="headerlink" title="Create sftp"></a>Create sftp</h2><p> mkdir -p /data/sftp/mysftp</p>
-<h2 id="修改目录权限"><a href="#修改目录权限" class="headerlink" title="修改目录权限"></a>修改目录权限</h2><pre><code>chown root:sftp /data/sftp/sftpu
-</code></pre>
+<h2 id="Create-sftp"><a href="#Create-sftp" class="headerlink" title="Create sftp"></a>Create sftp</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/sftp/mysftp</span><br></pre></td></tr></table></figure>
+<h2 id="修改目录权限"><a href="#修改目录权限" class="headerlink" title="修改目录权限"></a>修改目录权限</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown root:sftp /data/sftp/sftpu</span><br></pre></td></tr></table></figure>
+<h2 id="restart-ssh"><a href="#restart-ssh" class="headerlink" title="restart ssh"></a>restart ssh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd restart</span><br></pre></td></tr></table></figure>
+<hr>
+<p> 此时sfp已搭建完成，这时的sftp不能上传文件，如果上传问文件修改文件夹权限即可</p>
+
         
       </div>
 
@@ -403,7 +409,7 @@
           <div class="post-tags">
             <lable>标签: </lable>
             
-              <a href="/public/tags/sftp/" rel="tag"># sftp</a>
+              <a href="/tags/sftp/" rel="tag"># sftp</a>
             
           </div>
         
@@ -416,7 +422,7 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/public/2017/12/01/crontab/" rel="next" title="Crontab 定时任务">
+                <a href="/2017/12/01/crontab/" rel="next" title="Crontab 定时任务">
                   <i class="fa fa-chevron-left"></i> Crontab 定时任务
                 </a>
               
@@ -500,7 +506,7 @@
         
           
             <div class="site-state-item site-state-posts">
-              <a href="/public/archives">
+              <a href="/archives">
                 <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -509,7 +515,7 @@
 
           
             <div class="site-state-item site-state-categories">
-              <a href="/public/categories">
+              <a href="/categories">
                 <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
@@ -518,7 +524,7 @@
 
           
             <div class="site-state-item site-state-tags">
-              <a href="/public/tags">
+              <a href="/tags">
                 <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -554,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-Group"><span class="nav-number">1.</span> <span class="nav-text">Create Group</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-User"><span class="nav-number">2.</span> <span class="nav-text">Create User</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#useradd-pamrams"><span class="nav-number">2.1.</span> <span class="nav-text">useradd pamrams</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configution-sshd-config"><span class="nav-number">3.</span> <span class="nav-text">Configution sshd_config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-sftp"><span class="nav-number">4.</span> <span class="nav-text">Create sftp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改目录权限"><span class="nav-number">5.</span> <span class="nav-text">修改目录权限</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-Group"><span class="nav-number">1.</span> <span class="nav-text">Create Group</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-User"><span class="nav-number">2.</span> <span class="nav-text">Create User</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#useradd-pamrams"><span class="nav-number">2.1.</span> <span class="nav-text">useradd pamrams</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configution-sshd-config"><span class="nav-number">3.</span> <span class="nav-text">Configution sshd_config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-sftp"><span class="nav-number">4.</span> <span class="nav-text">Create sftp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改目录权限"><span class="nav-number">5.</span> <span class="nav-text">修改目录权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#restart-ssh"><span class="nav-number">6.</span> <span class="nav-text">restart ssh</span></a></li></ol></div>
             
 
           </div>
@@ -623,46 +629,46 @@
 
 
   
-  <script type="text/javascript" src="/public/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/public/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/public/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/public/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/public/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/public/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/public/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/public/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/public/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/public/js/src/post-details.js?v=5.1.0"></script>
-
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/public/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
